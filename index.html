@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vuejs sample</title>
+</head>
+<body>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+    <h1> {{ title }} </h1>
+    <hr>
+    <input type="text" v-on:input="changeTitle">
+    <p> {{ description }} </p>
+</div>
+
+<script>
+
+new Vue({
+    el : "#app" ,
+    data : {
+        title : "hello first vuejs sample!" ,
+        description : "bu bir açıklamadır." 
+    },
+    methods : {
+        changeTitle : function(event){
+            this.description = event.target.value;
+        }
+    }
+});
+
+</script>
+
+</body>
+</html>
